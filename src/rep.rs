@@ -246,6 +246,7 @@ pub struct Changelog {
 
 #[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct History {
+    pub id: Option<String>,
     pub author: User,
     pub created: String,
     pub items: Vec<HistoryItem>,

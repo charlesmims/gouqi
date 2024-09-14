@@ -32,10 +32,11 @@ fn main() {
                 let histories = issues.changelog(issue.key).unwrap().histories;
 
                 for history in histories {
+                    let id = history.id.unwrap();
                     let author = history.author.display_name;
                     let created = history.created;
                     let items = history.items;
-                    println!("{} \t {}\n ", author, created);
+                    println!("{} \t {} \t {}\n ", id, author, created);
 
                     for item in items {
                         let field = item.field;
