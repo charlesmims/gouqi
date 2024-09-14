@@ -248,7 +248,8 @@ pub struct Changelog {
 pub struct History {
     pub id: Option<String>,
     pub author: User,
-    pub created: String,
+    #[serde(default, with = "time::serde::iso8601::option")]
+    pub created: Option<OffsetDateTime>,
     pub items: Vec<HistoryItem>,
 }
 

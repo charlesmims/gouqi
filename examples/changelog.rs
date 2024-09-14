@@ -34,7 +34,7 @@ fn main() {
                 for history in histories {
                     let id = history.id.unwrap();
                     let author = history.author.display_name;
-                    let created = history.created;
+                    let created = history.created.unwrap();
                     let items = history.items;
                     println!("{} \t {} \t {}\n ", id, author, created);
 
