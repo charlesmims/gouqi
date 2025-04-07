@@ -17,7 +17,7 @@ pub struct Errors {
 }
 
 /// Represents a single jira issue
-#[derive(Serialize, Deserialize, Debug, Clone)]
+#[derive(Serialize, Deserialize, Debug, Clone, PartialEq)]
 pub struct Issue {
     #[serde(rename = "self")]
     pub self_link: String,
